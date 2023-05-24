@@ -2,8 +2,8 @@
   "routes": [
     {
       "src": "/redirect",
-      "status": 308,
-      "headers": { "Location": "https://example.com/" }
+      "status": 301,
+      "headers": { "Location": "/docs" }
     },
     {
       "src": "/",
@@ -32,13 +32,5 @@
     { "src": "/users/(?<id>[^/]*)", "dest": "/users-api.js?id=$id" },
     { "src": "/legacy", "status": 404 },
     { "src": "/.*", "dest": "https://my-old-site.com" }
-  ],
-  "redirects": [
-    { "source": "/me", "destination": "/foo.html" },
-    { "source": "/user", "destination": "/api/user", "permanent": false },
-    {
-      "source": "/view-source",
-      "destination": "https://github.com/vercel/vercel"
-    }
   ]
 }
