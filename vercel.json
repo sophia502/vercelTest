@@ -19,6 +19,14 @@
       "headers": { "cache-control": "s-maxage=1000" },
       "dest": "/bar.html"
     },
+    {
+      "src": "/example",
+      "dest": "/example/index.html"
+    },
+    {
+      "src": "/docs",
+      "dest": "/docs/"
+    },
     { "src": "/api", "dest": "/my-api.js" },
     { "src": "/users", "methods": ["POST"], "dest": "/users-api.js" },
     { "src": "/users/(?<id>[^/]*)", "dest": "/users-api.js?id=$id" },
